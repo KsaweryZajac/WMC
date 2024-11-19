@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f1e1;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #3e2723; 
+}
+
+header {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.menu {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6d4c41;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu-category {
+    margin-bottom: 50px;
+    border-bottom: 2px solid #f4f1e1;
+    padding-bottom: 20px;
+}
+
+.menu-category h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6d4c41;
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+}
+
+.menu-category h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #8d6e63;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-item {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #3e2723;
+    text-transform: capitalize;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f9a825;
+}
+
+ul li {
+    font-size: 1rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f4f1e1;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #efebe9;
+}
+
+ul li span.menu-item {
+    text-decoration: underline;
+    color: #8d6e63;
+}
+
+ul li span.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f9a825;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #3e2723; 
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+    }
+
+    .menu-category h3 {
+        font-size: 1.8rem;
+    }
+
+    .menu-item, .price {
+        font-size: 1rem;
+    }
+}
