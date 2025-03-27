@@ -1,0 +1,181 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a0933, #3b1a66);
+    font-family: 'Arial', sans-serif;
+}
+
+.game-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+
+.overlay-ui {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ccff, #0099cc);
+    border: none;
+    font-size: 0.9rem; /* Standard-Schriftgröße */
+    padding: 5px 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #fff;
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+.minimap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 150px;
+    background-color: #0d0d0d;
+    border: 2px solid #00ccff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+    z-index: 15;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+    color: #e6d9ff;
+    z-index: 15;
+}
+
+/* Statusleiste höher verschieben */
+.status-bar {
+    position: absolute;
+    bottom: 0; /* Kein Abstand unten auf PC */
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 30, 0.9);
+    border-top: 2px solid #00ccff;
+    border-radius: 5px 5px 0 0;
+    z-index: 15;
+    color: #e6d9ff;
+    box-shadow: 0 -2px 10px rgba(0, 204, 255, 0.3);
+    pointer-events: auto;
+}
+
+/* Mobile Controls zentrieren und weiter auseinander */
+.mobile-controls {
+    position: absolute;
+    bottom: 10px; /* Am unteren Rand bleiben */
+    left: 50%; /* Zentrieren */
+    transform: translateX(-50%); /* Exakte Zentrierung */
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Buttons mittig ausrichten */
+    gap: 15px; /* Mehr Abstand zwischen den Buttons (vorher 5px via margin) */
+    z-index: 15;
+    pointer-events: auto;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #00ccff, #0099cc);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 204, 255, 0.5);
+}
+
+/* Entferne alte Margin-Regeln und Positionierungen */
+#upBtn, #downBtn, #leftBtn, #rightBtn {
+    position: static;
+}
+
+@media (max-width: 768px) {
+    .mobile-controls { 
+        display: flex !important; 
+    }
+    .status-bar { 
+        font-size: 0.9rem; 
+        bottom: 70px; /* Abstand für mobile Controls */
+    }
+    .btn-sm { 
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+    .minimap { 
+        width: 180px;
+        height: 120px;
+    }
+}
+
+/* Media Query für kleine Bildschirme (max-width: 576px) */
+@media (max-width: 576px) {
+    .status-bar { 
+        font-size: 0.8rem; 
+        bottom: 60px; /* Abstand für mobile Controls */
+    }
+    .btn-sm { 
+        font-size: 0.6rem;
+        padding: 2px 5px;
+        width: 100%; 
+        margin-bottom: 5px; 
+    }
+    .minimap { 
+        width: 120px;
+        height: 90px;
+    }
+    .control-btn { 
+        width: 40px; 
+        height: 40px; 
+        font-size: 1.2rem; 
+        gap: 10px;
+    }
+}
+
+/* Menu Styling */
+#mainMenu {
+    background: linear-gradient(135deg, #1a0933, #3b1a66);
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+.card {
+    border: 2px solid #00ccff;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+.card-title {
+    color: #00ccff;
+}
+
+.card-text {
+    color: #e6d9ff;
+}
